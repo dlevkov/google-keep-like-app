@@ -1,0 +1,5 @@
+<md-list *ngIf="keeps.length > 0">
+    <md-list-item *ngFor="let keep of keeps">
+      <dl-keep-list-item [keep]="keep" (toggleComplete)="onToggleComplete($event)" (remove)="onRemove($event)"></dl-keep-list-item>
+    </md-list-item>
+</md-list>

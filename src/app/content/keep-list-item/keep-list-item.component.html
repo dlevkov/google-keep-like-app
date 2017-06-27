@@ -1,0 +1,6 @@
+<div class="container">
+  <md-checkbox class="left" (toggle)="onToggleComplete(keep)" [checked]="keep.complete">
+    <span>{{keep.title}}</span>
+  </md-checkbox>
+  <button class="right" md-button (click)="onRemove(keep)"><md-icon>delete</md-icon></button>
+</div>

@@ -1,0 +1,18 @@
+<md-toolbar>
+  <md-toolbar-row>
+    <span>Google Keep like app list</span>
+  </md-toolbar-row>
+  <md-toolbar-row>
+    <form [formGroup]="form" (submit)="onAdd(form.value)">
+      <md-input-container>
+        <input mdInput placeholder="Please write here" autofocus="" formControlName="title">
+        <md-error>Can not be empty, please fill</md-error>
+      </md-input-container>
+      <button md-icon-button type="submit" [disabled]="!form.controls['title'].valid"><md-icon>add</md-icon></button>
+    </form>
+  </md-toolbar-row>
+  <md-toolbar-row>
+    <br>
+  </md-toolbar-row>
+
+</md-toolbar>
